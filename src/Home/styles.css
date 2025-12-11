@@ -1,0 +1,213 @@
+/* Container Styles */
+.magazine-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: white;
+  border: 8px solid white;
+}
+
+.home-page {
+  padding-top: 250px;
+  width: 100%;
+  padding-bottom: 150px;
+}
+
+/* Unified Image Card Styles */
+.image-card {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-card.full-width {
+  width: 100%;
+  height: 500px;
+}
+
+.image-card.large {
+  height: 400px;
+}
+
+.image-card.square {
+  height: 400px;
+}
+
+.image-card.wide {
+  height: 400px;
+}
+
+/* Layout Styles */
+.second-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 8px;
+  width: 100%;
+}
+
+.third-row {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Marquee Styles */
+.marquee-container {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.marquee-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+  letter-spacing: 0.05em;
+  padding: 0 20px;
+}
+
+/* Image Styles */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay Styles */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.overlay-text-container {
+  padding: 30px;
+  height: fit-content;
+  width: fit-content;
+  background-color: black;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+/* Show overlay on hover */
+.image-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Text Styles */
+.title {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .magazine-container {
+    padding: 0 15px;
+  }
+
+  .second-row {
+    grid-template-columns: 1fr;
+  }
+
+  .third-row {
+    grid-template-columns: 1fr;
+  }
+
+  .image-card {
+    height: 300px;
+  }
+
+  .image-card.full-width {
+    height: 350px;
+  }
+
+  .image-card.large {
+    height: 300px;
+  }
+
+  .image-card.square {
+    height: 300px;
+  }
+
+  .image-card.wide {
+    height: 300px;
+  }
+
+  .marquee-text {
+    font-size: 32px;
+  }
+
+  .overlay {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin: 0 0 8px 0;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .magazine-container {
+    padding: 0 10px;
+  }
+
+  .image-card {
+    height: 250px;
+    border-radius: 0;
+  }
+
+  .image-card.full-width {
+    height: 300px;
+  }
+
+  .marquee-text {
+    font-size: 24px;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+}

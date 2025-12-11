@@ -1,0 +1,22 @@
+.headerText {
+  font-family: "Oswald";
+  font-weight: 600;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  mix-blend-mode: difference;
+  padding-top: 30px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: gray;
+}
